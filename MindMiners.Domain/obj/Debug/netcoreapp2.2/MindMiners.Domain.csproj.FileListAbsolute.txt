@@ -1,0 +1,9 @@
+C:\Honda\Projetos\MindMiners\MindMiners.Domain\bin\Debug\netcoreapp2.2\MindMiners.Domain.deps.json
+C:\Honda\Projetos\MindMiners\MindMiners.Domain\bin\Debug\netcoreapp2.2\MindMiners.Domain.dll
+C:\Honda\Projetos\MindMiners\MindMiners.Domain\bin\Debug\netcoreapp2.2\MindMiners.Domain.pdb
+C:\Honda\Projetos\MindMiners\MindMiners.Domain\obj\Debug\netcoreapp2.2\MindMiners.Domain.csprojAssemblyReference.cache
+C:\Honda\Projetos\MindMiners\MindMiners.Domain\obj\Debug\netcoreapp2.2\MindMiners.Domain.csproj.CoreCompileInputs.cache
+C:\Honda\Projetos\MindMiners\MindMiners.Domain\obj\Debug\netcoreapp2.2\MindMiners.Domain.AssemblyInfoInputs.cache
+C:\Honda\Projetos\MindMiners\MindMiners.Domain\obj\Debug\netcoreapp2.2\MindMiners.Domain.AssemblyInfo.cs
+C:\Honda\Projetos\MindMiners\MindMiners.Domain\obj\Debug\netcoreapp2.2\MindMiners.Domain.dll
+C:\Honda\Projetos\MindMiners\MindMiners.Domain\obj\Debug\netcoreapp2.2\MindMiners.Domain.pdb

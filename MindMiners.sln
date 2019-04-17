@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Presentation", "1-Presentation", "{0DFD4F86-6CF4-416C-9C0C-44B913F7040A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Application", "2-Application", "{D6D581BC-AEAB-4F54-9218-1F2A3C396E65}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Domain", "3-Domain", "{8E698619-E7D8-4B3C-84EE-623AEF0A4674}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-Infrastructure", "4-Infrastructure", "{8989D363-E4CD-4A9D-8446-7EC0B4A5A9B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5-Test", "5-Test", "{B419249C-415A-4E78-BEE4-3C3D7E180A22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindMiners.Application", "MindMiners.Application\MindMiners.Application.csproj", "{41D2DA92-CD0C-455B-9631-8DFBBE49BD72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindMiners.Domain", "MindMiners.Domain\MindMiners.Domain.csproj", "{53D36B1E-F3CF-44D5-B154-72700DF1D7B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1-Data", "4.1-Data", "{8146CFC8-DE44-4345-AA89-34D94EE07F30}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2-CrossCutting", "4.2-CrossCutting", "{7AFAAD7A-4D5D-46C1-8087-8ECFF36A261A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindMiners.CrossCutting.IoC", "MindMiners.CrossCutting.IoC\MindMiners.CrossCutting.IoC.csproj", "{AD79C00C-F6EB-4FC9-8A99-513CA799AE2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindMiners.Data", "MindMiners.Data\MindMiners.Data.csproj", "{B01E7D03-F458-4BC3-814A-014919F8178E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindMiners", "MindMiners\MindMiners.csproj", "{44444201-3BA8-42AC-8131-5EED470B4E13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindMiners.CrossCutting.Infrastructure", "MindMiners.CrossCutting.Infrastructure\MindMiners.CrossCutting.Infrastructure.csproj", "{296C9232-5D42-4495-9E27-DAC2B44FCA08}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41D2DA92-CD0C-455B-9631-8DFBBE49BD72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41D2DA92-CD0C-455B-9631-8DFBBE49BD72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41D2DA92-CD0C-455B-9631-8DFBBE49BD72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41D2DA92-CD0C-455B-9631-8DFBBE49BD72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53D36B1E-F3CF-44D5-B154-72700DF1D7B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53D36B1E-F3CF-44D5-B154-72700DF1D7B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53D36B1E-F3CF-44D5-B154-72700DF1D7B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53D36B1E-F3CF-44D5-B154-72700DF1D7B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD79C00C-F6EB-4FC9-8A99-513CA799AE2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD79C00C-F6EB-4FC9-8A99-513CA799AE2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD79C00C-F6EB-4FC9-8A99-513CA799AE2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD79C00C-F6EB-4FC9-8A99-513CA799AE2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B01E7D03-F458-4BC3-814A-014919F8178E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B01E7D03-F458-4BC3-814A-014919F8178E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B01E7D03-F458-4BC3-814A-014919F8178E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B01E7D03-F458-4BC3-814A-014919F8178E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44444201-3BA8-42AC-8131-5EED470B4E13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44444201-3BA8-42AC-8131-5EED470B4E13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44444201-3BA8-42AC-8131-5EED470B4E13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44444201-3BA8-42AC-8131-5EED470B4E13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{296C9232-5D42-4495-9E27-DAC2B44FCA08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{296C9232-5D42-4495-9E27-DAC2B44FCA08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{296C9232-5D42-4495-9E27-DAC2B44FCA08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{296C9232-5D42-4495-9E27-DAC2B44FCA08}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{41D2DA92-CD0C-455B-9631-8DFBBE49BD72} = {D6D581BC-AEAB-4F54-9218-1F2A3C396E65}
+		{53D36B1E-F3CF-44D5-B154-72700DF1D7B5} = {8E698619-E7D8-4B3C-84EE-623AEF0A4674}
+		{8146CFC8-DE44-4345-AA89-34D94EE07F30} = {8989D363-E4CD-4A9D-8446-7EC0B4A5A9B7}
+		{7AFAAD7A-4D5D-46C1-8087-8ECFF36A261A} = {8989D363-E4CD-4A9D-8446-7EC0B4A5A9B7}
+		{AD79C00C-F6EB-4FC9-8A99-513CA799AE2B} = {7AFAAD7A-4D5D-46C1-8087-8ECFF36A261A}
+		{B01E7D03-F458-4BC3-814A-014919F8178E} = {8146CFC8-DE44-4345-AA89-34D94EE07F30}
+		{44444201-3BA8-42AC-8131-5EED470B4E13} = {0DFD4F86-6CF4-416C-9C0C-44B913F7040A}
+		{296C9232-5D42-4495-9E27-DAC2B44FCA08} = {7AFAAD7A-4D5D-46C1-8087-8ECFF36A261A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C67416BC-FA90-41F4-B77A-A25FF1FC040E}
+	EndGlobalSection
+EndGlobal

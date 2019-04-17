@@ -1,0 +1,12 @@
+C:\Honda\Projetos\MindMiners\MindMiners.CrossCutting.Infrastructure\bin\Debug\netcoreapp2.2\MindMiners.CrossCutting.Infrastructure.deps.json
+C:\Honda\Projetos\MindMiners\MindMiners.CrossCutting.Infrastructure\bin\Debug\netcoreapp2.2\MindMiners.CrossCutting.Infrastructure.dll
+C:\Honda\Projetos\MindMiners\MindMiners.CrossCutting.Infrastructure\bin\Debug\netcoreapp2.2\MindMiners.CrossCutting.Infrastructure.pdb
+C:\Honda\Projetos\MindMiners\MindMiners.CrossCutting.Infrastructure\bin\Debug\netcoreapp2.2\MindMiners.Domain.dll
+C:\Honda\Projetos\MindMiners\MindMiners.CrossCutting.Infrastructure\bin\Debug\netcoreapp2.2\MindMiners.Domain.pdb
+C:\Honda\Projetos\MindMiners\MindMiners.CrossCutting.Infrastructure\obj\Debug\netcoreapp2.2\MindMiners.CrossCutting.Infrastructure.csprojAssemblyReference.cache
+C:\Honda\Projetos\MindMiners\MindMiners.CrossCutting.Infrastructure\obj\Debug\netcoreapp2.2\MindMiners.CrossCutting.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Honda\Projetos\MindMiners\MindMiners.CrossCutting.Infrastructure\obj\Debug\netcoreapp2.2\MindMiners.CrossCutting.Infrastructure.AssemblyInfoInputs.cache
+C:\Honda\Projetos\MindMiners\MindMiners.CrossCutting.Infrastructure\obj\Debug\netcoreapp2.2\MindMiners.CrossCutting.Infrastructure.AssemblyInfo.cs
+C:\Honda\Projetos\MindMiners\MindMiners.CrossCutting.Infrastructure\obj\Debug\netcoreapp2.2\MindMiners.CrossCutting.Infrastructure.csproj.CopyComplete
+C:\Honda\Projetos\MindMiners\MindMiners.CrossCutting.Infrastructure\obj\Debug\netcoreapp2.2\MindMiners.CrossCutting.Infrastructure.dll
+C:\Honda\Projetos\MindMiners\MindMiners.CrossCutting.Infrastructure\obj\Debug\netcoreapp2.2\MindMiners.CrossCutting.Infrastructure.pdb

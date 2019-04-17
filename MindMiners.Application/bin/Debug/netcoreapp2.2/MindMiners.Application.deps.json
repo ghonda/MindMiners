@@ -1,0 +1,47 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.2",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {
+      "MindMiners.Application/1.0.0": {
+        "dependencies": {
+          "MindMiners.Data": "1.0.0",
+          "MindMiners.Domain": "1.0.0"
+        },
+        "runtime": {
+          "MindMiners.Application.dll": {}
+        }
+      },
+      "MindMiners.Data/1.0.0": {
+        "runtime": {
+          "MindMiners.Data.dll": {}
+        }
+      },
+      "MindMiners.Domain/1.0.0": {
+        "runtime": {
+          "MindMiners.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MindMiners.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MindMiners.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MindMiners.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
