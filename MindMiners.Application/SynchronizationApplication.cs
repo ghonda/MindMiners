@@ -1,6 +1,9 @@
-﻿using MindMiners.Domain.Interfaces;
+﻿using MindMiners.CrossCutting.Infrastructure.Utils;
+using MindMiners.Domain.Interfaces;
 using System;
 using System.IO;
+using System.Linq;
+using System.Text;
 
 namespace MindMiners.Application
 {
@@ -12,19 +15,17 @@ namespace MindMiners.Application
         {
             _srtParser = srtParser;
         }
-        public void SubtitleSync(Stream strStream, double offSetSeconds = 0)
+        public string SubtitleSync(Stream strStream, double offSetSeconds = 0)
         {
-
-            var offSetMilliSeconds = ConvertSecondsToMilliseconds(offSetSeconds);
-            //converter em entity
+            var result = new StringBuilder();
+            var offSetMilliSeconds = Helper.ConvertSecondsToMilliseconds(offSetSeconds);
             var subtitleList = _srtParser.ParseToSubtitleItemList(strStream, offSetMilliSeconds);
+            subtitleList.ForEach(c => result.AppendLine(c.ToString()));
+            return result.ToString();
+
+            //TODO
             //salvar no banco
             //retornar dowload;
-        }
-
-        private static int ConvertSecondsToMilliseconds(double seconds)
-        {
-            return Convert.ToInt32(TimeSpan.FromSeconds(seconds).TotalMilliseconds);
         }
     }
 }

@@ -6,6 +6,6 @@ namespace MindMiners.Domain.Interfaces
 {
     public interface ISrtParser
     {
-        IList<SubtitleItem> ParseToSubtitleItemList(Stream srtStream, int offsetMilliSeconds = 0);
+        List<SubtitleItem> ParseToSubtitleItemList(Stream srtStream, int offsetMilliSeconds = 0);
     }
 }

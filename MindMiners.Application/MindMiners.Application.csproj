@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MindMiners.CrossCutting.Infrastructure\MindMiners.CrossCutting.Infrastructure.csproj" />
     <ProjectReference Include="..\MindMiners.Data\MindMiners.Data.csproj" />
     <ProjectReference Include="..\MindMiners.Domain\MindMiners.Domain.csproj" />
   </ItemGroup>

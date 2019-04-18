@@ -233,6 +233,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
+          "MindMiners.CrossCutting.Infrastructure": "1.0.0",
           "MindMiners.Data": "1.0.0",
           "MindMiners.Domain": "1.0.0"
         },

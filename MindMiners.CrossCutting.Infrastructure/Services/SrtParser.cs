@@ -12,7 +12,7 @@ namespace MindMiners.CrossCutting.Infrastructure.Services
     public class SrtParser : ISrtParser
     {
         private readonly string[] _delimiters = { "-->", "- >", "->" };
-        public IList<SubtitleItem> ParseToSubtitleItemList(Stream srtStream, int offsetMilliSeconds = 0)
+        public List<SubtitleItem> ParseToSubtitleItemList(Stream srtStream, int offsetMilliSeconds = 0)
         {
             if (!srtStream.CanRead || !srtStream.CanSeek)
             {

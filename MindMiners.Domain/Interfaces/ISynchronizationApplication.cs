@@ -4,6 +4,6 @@ namespace MindMiners.Domain.Interfaces
 {
     public interface ISynchronizationApplication
     {
-        void SubtitleSync(Stream strStream, double offSetSeconds = 0);
+        string SubtitleSync(Stream strStream, double offSetSeconds = 0);
     }
 }

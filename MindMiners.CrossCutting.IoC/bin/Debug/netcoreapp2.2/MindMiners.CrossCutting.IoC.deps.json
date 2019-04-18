@@ -38,6 +38,7 @@
       },
       "MindMiners.Application/1.0.0": {
         "dependencies": {
+          "MindMiners.CrossCutting.Infrastructure": "1.0.0",
           "MindMiners.Data": "1.0.0",
           "MindMiners.Domain": "1.0.0"
         },

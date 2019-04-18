@@ -12,3 +12,5 @@ C:\Honda\Projetos\MindMiners\MindMiners.Application\bin\Debug\netcoreapp2.2\Mind
 C:\Honda\Projetos\MindMiners\MindMiners.Application\bin\Debug\netcoreapp2.2\MindMiners.Data.pdb
 C:\Honda\Projetos\MindMiners\MindMiners.Application\bin\Debug\netcoreapp2.2\MindMiners.Domain.pdb
 C:\Honda\Projetos\MindMiners\MindMiners.Application\obj\Debug\netcoreapp2.2\MindMiners.Application.csproj.CopyComplete
+C:\Honda\Projetos\MindMiners\MindMiners.Application\bin\Debug\netcoreapp2.2\MindMiners.CrossCutting.Infrastructure.dll
+C:\Honda\Projetos\MindMiners\MindMiners.Application\bin\Debug\netcoreapp2.2\MindMiners.CrossCutting.Infrastructure.pdb

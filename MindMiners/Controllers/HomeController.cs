@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
+using MindMiners.CrossCutting.Infrastructure.Utils;
 using MindMiners.Domain.Interfaces;
 using MindMiners.Models;
-using System.Diagnostics;
 using System.IO;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace MindMiners.Controllers
@@ -11,10 +13,12 @@ namespace MindMiners.Controllers
     public class HomeController : Controller
     {
         private readonly ISynchronizationApplication _synchronizationApplication;
+        private readonly AbstractValidator<FileInputModel> _validations;
 
-        public HomeController(ISynchronizationApplication synchronizationApplication)
+        public HomeController(ISynchronizationApplication synchronizationApplication, AbstractValidator<FileInputModel> validations)
         {
             _synchronizationApplication = synchronizationApplication;
+            _validations = validations;
         }
         public IActionResult Index()
         {
@@ -24,30 +28,30 @@ namespace MindMiners.Controllers
         [HttpPost]
         public async Task<IActionResult> UploadAndDownloadFile(FileInputModel model)
         {
-            if (model.FileToUpload is null || model.FileToUpload.Length == 0)
-                return Content("file not selected");
+            ViewBag.Error = string.Empty;
+
+            var validationResult = _validations.Validate(model);
+            if (!validationResult.IsValid)
+                return ReturnError(validationResult.Errors.FirstOrDefault().ErrorMessage);
 
             var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", model.FileToUpload.FileName);
 
-            //using (var stream = new FileStream(path, FileMode.Create))
-            //{
-            //    await model.FileToUpload.CopyToAsync(stream);
-            //    _synchronizationApplication.SubtitleSync(stream);
-            //}
-
-            var memory = new MemoryStream();
-            using (var stream = new FileStream(path, FileMode.Open))
+            using (var stream = new FileStream(path, FileMode.Create))
             {
-                await stream.CopyToAsync(memory);
+                await model.FileToUpload.CopyToAsync(stream);
+
+                var offSet = Helper.ConvertStringToDouble(model.Offset);
+                var newFile = _synchronizationApplication.SubtitleSync(stream, offSet);
+
+                byte[] fileBytes = Encoding.ASCII.GetBytes(newFile);
+                return File(fileBytes, "application/x-msdownload", model.FileToUpload.FileName);
             }
-            memory.Position = 0;
-            return File(memory, ".str", Path.GetFileName(path));
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        private IActionResult ReturnError(string errorMessage)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            ViewBag.Error = errorMessage;
+            return View("Index");
         }
     }
 }

@@ -208,6 +208,19 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "MindMiners.CrossCutting.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "MindMiners.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MindMiners.CrossCutting.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MindMiners.CrossCutting.Infrastructure.dll": {}
+        }
+      },
       "MindMiners.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
@@ -699,6 +712,11 @@
         "netstandard.library.nuspec"
       ]
     },
+    "MindMiners.CrossCutting.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../MindMiners.CrossCutting.Infrastructure/MindMiners.CrossCutting.Infrastructure.csproj",
+      "msbuildProject": "../MindMiners.CrossCutting.Infrastructure/MindMiners.CrossCutting.Infrastructure.csproj"
+    },
     "MindMiners.Data/1.0.0": {
       "type": "project",
       "path": "../MindMiners.Data/MindMiners.Data.csproj",
@@ -713,6 +731,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "Microsoft.NETCore.App >= 2.2.0",
+      "MindMiners.CrossCutting.Infrastructure >= 1.0.0",
       "MindMiners.Data >= 1.0.0",
       "MindMiners.Domain >= 1.0.0"
     ]
@@ -747,6 +766,9 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
+            "C:\\Honda\\Projetos\\MindMiners\\MindMiners.CrossCutting.Infrastructure\\MindMiners.CrossCutting.Infrastructure.csproj": {
+              "projectPath": "C:\\Honda\\Projetos\\MindMiners\\MindMiners.CrossCutting.Infrastructure\\MindMiners.CrossCutting.Infrastructure.csproj"
+            },
             "C:\\Honda\\Projetos\\MindMiners\\MindMiners.Data\\MindMiners.Data.csproj": {
               "projectPath": "C:\\Honda\\Projetos\\MindMiners\\MindMiners.Data\\MindMiners.Data.csproj"
             },

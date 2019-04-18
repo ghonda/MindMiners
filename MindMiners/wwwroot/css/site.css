@@ -2,55 +2,157 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
 }
 
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  font-size: 14px;
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
 }
+
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
 button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+    font-size: 1rem;
+    line-height: inherit;
 }
 
 /* Sticky footer styles
 -------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
+
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
 }
+
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  line-height: 60px; /* Vertically center the text there */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
 }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: #f4f5f7;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.box-container {
+    display: block;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 300px;
+    padding: 25px;
+    border: 2px solid #a5d3a4;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.2);
+}
+
+.box-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #649763;
+}
+
+.box-input {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.2em;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 15px;
+    color: #3d3d3d;
+    border: none;
+    outline: none;
+}
+
+    .box-input::placeholder {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #b8b1b1;
+    }
+
+    .box-input:not(:first-of-type) {
+        height: 25px;
+        padding: 2px 8px;
+        border: 1px solid #9f9f9f;
+        border-radius: 5px;
+    }
+
+.wrap-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+    .wrap-btn button {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        padding: 5px 15px;
+        cursor: pointer;
+        transition: 0.3s;
+        text-transform: uppercase;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        background: #649763;
+    }
+
+        .wrap-btn button:hover {
+            background: #70b36f;
+        }
+
+    .wrap-btn a {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        transition: 0.3s;
+        text-decoration: none;
+        color: #649763;
+    }
+
+        .wrap-btn a:hover {
+            color: #70b36f;
+        }

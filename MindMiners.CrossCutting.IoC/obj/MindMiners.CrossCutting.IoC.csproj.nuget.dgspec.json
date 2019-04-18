@@ -30,6 +30,9 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
+              "C:\\Honda\\Projetos\\MindMiners\\MindMiners.CrossCutting.Infrastructure\\MindMiners.CrossCutting.Infrastructure.csproj": {
+                "projectPath": "C:\\Honda\\Projetos\\MindMiners\\MindMiners.CrossCutting.Infrastructure\\MindMiners.CrossCutting.Infrastructure.csproj"
+              },
               "C:\\Honda\\Projetos\\MindMiners\\MindMiners.Data\\MindMiners.Data.csproj": {
                 "projectPath": "C:\\Honda\\Projetos\\MindMiners\\MindMiners.Data\\MindMiners.Data.csproj"
               },

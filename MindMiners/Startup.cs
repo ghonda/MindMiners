@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using FluentValidation;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -6,6 +7,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using MindMiners.CrossCutting.IoC;
+using MindMiners.Models;
+using MindMiners.Validators;
 using System.IO;
 
 namespace MindMiners
@@ -34,6 +37,8 @@ namespace MindMiners
             services.AddSingleton<IFileProvider>(
             new PhysicalFileProvider(
                 Path.Combine(Directory.GetCurrentDirectory(), "wwwroot")));
+
+            services.AddTransient<AbstractValidator<FileInputModel>, FileInputModelValidator>();
 
             NativeInjector.Register(services);
         }
