@@ -360,3 +360,21 @@ healthchecksdb
 MigrationBackup/
 
 # End of https://www.gitignore.io/api/visualstudio,visualstudiocode
+
+.vs/MindMiners/v16/.suo
+.vs/MindMiners/DesignTimeBuild/.dtbcache
+.vs/MindMiners/v16/Server/sqlite3/storage.ide
+.vscode/
+.vscode/launch.json
+.vscode/tasks.json
+
+MindMiners.Domain/obj/
+MindMiners.Domain/bin/
+MindMiners.Application/obj/
+MindMiners.Application/bin/
+MindMiners.CrossCutting.Infrastructure/obj/
+MindMiners.CrossCutting.Infrastructure/bin/
+MindMiners.CrossCutting.IoC/obj/
+MindMiners.CrossCutting.IoC/bin/
+MindMiners.Data/obj/
+MindMiners.Data/bin/

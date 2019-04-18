@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using MindMiners.CrossCutting.Infrastructure.Utils;
 using MindMiners.Domain.Interfaces;
 using MindMiners.Models;
+using System;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -29,22 +30,28 @@ namespace MindMiners.Controllers
         public async Task<IActionResult> UploadAndDownloadFile(FileInputModel model)
         {
             ViewBag.Error = string.Empty;
-
-            var validationResult = _validations.Validate(model);
-            if (!validationResult.IsValid)
-                return ReturnError(validationResult.Errors.FirstOrDefault().ErrorMessage);
-
-            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", model.FileToUpload.FileName);
-
-            using (var stream = new FileStream(path, FileMode.Create))
+            try
             {
-                await model.FileToUpload.CopyToAsync(stream);
+                var validationResult = _validations.Validate(model);
+                if (!validationResult.IsValid)
+                    return ReturnError(validationResult.Errors.FirstOrDefault().ErrorMessage);
 
-                var offSet = Helper.ConvertStringToDouble(model.Offset);
-                var newFile = _synchronizationApplication.SubtitleSync(stream, offSet);
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", model.FileToUpload.FileName);
 
-                byte[] fileBytes = Encoding.ASCII.GetBytes(newFile);
-                return File(fileBytes, "application/x-msdownload", model.FileToUpload.FileName);
+                using (var stream = new FileStream(path, FileMode.Create))
+                {
+                    await model.FileToUpload.CopyToAsync(stream);
+
+                    var offSet = Helper.ConvertStringToDouble(model.Offset);
+                    var newFile = _synchronizationApplication.SubtitleSync(stream, offSet);
+
+                    byte[] fileBytes = Encoding.ASCII.GetBytes(newFile);
+                    return File(fileBytes, "application/x-msdownload", model.FileToUpload.FileName);
+                }
+            }
+            catch (Exception e)
+            {
+                return ReturnError(e.Message);
             }
         }
 
