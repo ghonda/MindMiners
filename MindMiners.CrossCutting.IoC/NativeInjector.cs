@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using MindMiners.Application;
 using MindMiners.CrossCutting.Infrastructure.Services;
+using MindMiners.Data.Repositories;
 using MindMiners.Domain.Interfaces;
 
 namespace MindMiners.CrossCutting.IoC
@@ -11,6 +12,7 @@ namespace MindMiners.CrossCutting.IoC
         {
             service.AddScoped<ISynchronizationApplication, SynchronizationApplication>();
             service.AddScoped<ISrtParser, SrtParser>();
+            service.AddScoped<IFileHistoryRepository, FileHistoryRepository>();
         }
     }
 }

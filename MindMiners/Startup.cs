@@ -8,6 +8,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using MindMiners.CrossCutting.IoC;
 using MindMiners.Data.Repositories;
+using MindMiners.Domain.Config;
+using MindMiners.Domain.Interfaces;
 using MindMiners.Models;
 using MindMiners.Validators;
 using System.IO;
@@ -39,11 +41,16 @@ namespace MindMiners
             new PhysicalFileProvider(
                 Path.Combine(Directory.GetCurrentDirectory(), "wwwroot")));
 
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "dbs", "MindMiners.sqlite");
+            var connectionConfiguration = new ConnectionConfiguration(path);
+
+            services.AddSingleton<IConnectionConfiguration>(connectionConfiguration);
+
             services.AddTransient<AbstractValidator<FileInputModel>, FileInputModelValidator>();
 
             NativeInjector.Register(services);
 
-            DbInit.CreateDb();
+            DbInit.CreateDb(connectionConfiguration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
