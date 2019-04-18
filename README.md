@@ -8,12 +8,16 @@ Recebe o upload de um arquivo de legenda SubRip(.srt), aplica o deslocamento tem
 
 ## Tecnologias e frameworks
 
-* [.NetCore 2.2]
-* [C#]
+* .NetCore 2.2
+* C#
 * [FluentValidation](https://fluentvalidation.net/) - Framework utilizado para realizar validações dos inputs.
+* [Dapper](https://dapper-tutorial.net/) - MicroOrm para conexão com o banco.
+* [SqLite3](https://www.sqlite.org/index.html) - Banco de dados serveless.
 
 ## Authors
 
 * **Guilherme Honda**  
-[Linkedin](https://www.linkedin.com/in/guilherme-honda-7b5ab791/)
+
+```
 [Curriculum](https://ghonda.github.io/)
+```
