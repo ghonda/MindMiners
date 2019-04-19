@@ -27,7 +27,7 @@ namespace MindMiners.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> UploadAndDownloadFile([Bind("FileToUpload,Offset")]FileInputModel model)
+        public IActionResult UploadAndDownloadFile([Bind("FileToUpload,Offset")]FileInputModel model)
         {
             ViewBag.Error = string.Empty;
             try
@@ -36,18 +36,10 @@ namespace MindMiners.Controllers
                 if (!validationResult.IsValid)
                     return ReturnError(validationResult.Errors.FirstOrDefault().ErrorMessage);
 
-                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", model.FileToUpload.FileName);
-
-                using (var stream = new FileStream(path, FileMode.Create))
-                {
-                    await model.FileToUpload.CopyToAsync(stream);
-
-                    var offSet = Helper.ConvertStringToDouble(model.Offset);
-                    var newFile = _synchronizationApplication.SubtitleSync(stream, offSet);
-
-                    byte[] fileBytes = Encoding.ASCII.GetBytes(newFile);
-                    return File(fileBytes, "application/x-msdownload", model.FileToUpload.FileName);
-                }
+                var offSet = Helper.ConvertStringToDouble(model.Offset);
+                var newFile = _synchronizationApplication.SubtitleSync(model.FileToUpload.OpenReadStream(), offSet);
+                var fileBytes = Encoding.ASCII.GetBytes(newFile);
+                return File(fileBytes, "application/x-msdownload", model.FileToUpload.FileName);
             }
             catch (Exception e)
             {

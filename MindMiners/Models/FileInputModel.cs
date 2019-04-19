@@ -6,6 +6,6 @@ namespace MindMiners.Models
     public class FileInputModel
     {
         public IFormFile FileToUpload { get; set; }
-        public string Offset { get; private set; }
+        public string Offset { get; set; } 
     }
 }
