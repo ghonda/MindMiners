@@ -13,7 +13,7 @@ namespace MindMiners.Data.Repositories
                 CREATE TABLE IF NOT EXISTS [FileHistory] (
                     [id] INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
                     [name] NVARCHAR(128) NOT NULL,
-                    [newname] NVARCHAR(128) NOT NULL,
+                    [file] BLOB,
                     [offset] REAL NOT NULL,
                     [CreateDate] TIMESTAMP DEFAULT CURRENT_TIMESTAMP)");
             }

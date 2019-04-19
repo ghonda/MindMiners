@@ -14,17 +14,17 @@ namespace MindMiners.Data.Repositories
             _connectionConfiguration = connectionConfiguration;
         }
 
-        public void InsertHistory(FileHistory fileHistory)
+        public void InsertHistory(string name, byte[] file, double offset)
         {
             using (var dbConnection = _connectionConfiguration.GetConnection())
             {
-                dbConnection.Execute(@"INSERT INTO FileHistory(name, newname, offset)
-                    VALUES (@name, @newname, @offset)",
+                dbConnection.Execute(@"INSERT INTO FileHistory(name, file, offset)
+                    VALUES (@name, @file, @offset)",
                     new
                     {
-                        @name = fileHistory.Name,
-                        @newname = fileHistory.NewName,
-                        @offset = fileHistory.Offset
+                        name,
+                        file,
+                        offset
                     });
             }
         }

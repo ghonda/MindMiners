@@ -5,7 +5,7 @@ namespace MindMiners.Domain.Interfaces
 {
     public interface IFileHistoryRepository
     {
-        void InsertHistory(FileHistory fileHistory);
+        void InsertHistory(string name, byte[] file, double offset);
         IEnumerable<FileHistory> GetFileHistories();
     }
 }
