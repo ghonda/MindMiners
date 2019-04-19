@@ -37,9 +37,8 @@ namespace MindMiners.Controllers
                     return ReturnError(validationResult.Errors.FirstOrDefault().ErrorMessage);
 
                 var offSet = Helper.ConvertStringToDouble(model.Offset);
-                var newFile = _synchronizationApplication.SubtitleSync(model.FileToUpload.OpenReadStream(), offSet);
-                var fileBytes = Encoding.ASCII.GetBytes(newFile);
-                return File(fileBytes, "application/x-msdownload", model.FileToUpload.FileName);
+                var newFileBytes = _synchronizationApplication.SubtitleSync(model.FileToUpload.OpenReadStream(),model.FileToUpload.FileName,  offSet);
+                return File(newFileBytes, "application/x-msdownload", model.FileToUpload.FileName);
             }
             catch (Exception e)
             {

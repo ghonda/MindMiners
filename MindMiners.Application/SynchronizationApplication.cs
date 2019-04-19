@@ -15,13 +15,13 @@ namespace MindMiners.Application
         {
             _srtParser = srtParser;
         }
-        public string SubtitleSync(Stream strStream, double offSetSeconds = 0)
+        public byte[] SubtitleSync(Stream strStream,string fileName, double offSetSeconds = 0)
         {
             var result = new StringBuilder();
             var offSetMilliSeconds = Helper.ConvertSecondsToMilliseconds(offSetSeconds);
             var subtitleList = _srtParser.ParseToSubtitleItemList(strStream, offSetMilliSeconds);
             subtitleList.ForEach(c => result.AppendLine(c.ToString()));
-            return result.ToString();
+            return Encoding.ASCII.GetBytes(result.ToString());
 
             //TODO
             //salvar no banco
