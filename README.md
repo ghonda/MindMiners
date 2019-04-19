@@ -18,6 +18,4 @@ Recebe o upload de um arquivo de legenda SubRip(.srt), aplica o deslocamento tem
 
 * **Guilherme Honda**  
 
-```
 [Curriculum](https://ghonda.github.io/)
-```

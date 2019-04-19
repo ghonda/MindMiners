@@ -27,7 +27,7 @@ namespace MindMiners.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> UploadAndDownloadFile(FileInputModel model)
+        public async Task<IActionResult> UploadAndDownloadFile([Bind("FileToUpload,Offset")]FileInputModel model)
         {
             ViewBag.Error = string.Empty;
             try
