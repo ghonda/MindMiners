@@ -10,9 +10,11 @@ namespace MindMiners.CrossCutting.IoC
     {
         public static void Register(IServiceCollection service)
         {
+            service.AddScoped<IHistoryApplication, HistoryApplication>();
             service.AddScoped<ISynchronizationApplication, SynchronizationApplication>();
             service.AddScoped<ISrtParser, SrtParser>();
             service.AddScoped<IFileHistoryRepository, FileHistoryRepository>();
+            
         }
     }
 }

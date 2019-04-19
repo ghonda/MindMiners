@@ -2,7 +2,6 @@
 using MindMiners.Domain.Interfaces;
 using System;
 using System.IO;
-using System.Linq;
 using System.Text;
 
 namespace MindMiners.Application
@@ -11,7 +10,6 @@ namespace MindMiners.Application
     {
         private readonly ISrtParser _srtParser;
         private readonly IFileHistoryRepository _fileHistoryRepository;
-
 
         public SynchronizationApplication(ISrtParser srtParser, IFileHistoryRepository fileHistoryRepository)
         {

@@ -7,5 +7,7 @@ namespace MindMiners.Domain.Interfaces
     {
         void InsertHistory(string name, byte[] file, double offset);
         IEnumerable<FileHistory> GetFileHistories();
+        (byte[] fileBytes, string name) GetFile(int id);
+        void RemoveFile(int id);
     }
 }

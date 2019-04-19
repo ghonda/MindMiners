@@ -34,5 +34,17 @@ namespace MindMiners.Data.Repositories
             using (var dbConnection = _connectionConfiguration.GetConnection())
                 return dbConnection.Query<FileHistory>("SELECT * FROM FileHistory");
         }
+
+        public (byte[] fileBytes, string name) GetFile(int id)
+        {
+            using (var dbConnection = _connectionConfiguration.GetConnection())
+                return dbConnection.QueryFirstOrDefault<(byte[] fileBytes, string name)>("SELECT file, name FROM FileHistory where id = @id", new {id});
+        }
+
+        public void RemoveFile(int id)
+        {
+            using (var dbConnection = _connectionConfiguration.GetConnection())
+                dbConnection.Execute("Delete FROM FileHistory where id = @id", new {id});
+        }
     }
 }

@@ -16,4 +16,4 @@ Recebe o upload de um arquivo de legenda SubRip(.srt), aplica o deslocamento tem
 
 ## Authors
 
-* **Guilherme Honda**  - [Curriculum](https://ghonda.github.io/)
+* [**Guilherme Honda**](https://ghonda.github.io/)

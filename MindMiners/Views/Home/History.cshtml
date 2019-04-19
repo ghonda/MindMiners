@@ -1,0 +1,43 @@
+@model List<MindMiners.Domain.Entities.FileHistory>
+
+@{
+    ViewData["Title"] = "History";
+}
+
+<div class="text-center">
+    <div class="main">
+        <div class="box-container-history">
+            <h1 class="box-title">SubRip Subtitles History</h1>
+
+            @if(Model.Any()){
+            <table class="table  table-responsive ">  
+                <tr>  
+                    <th>File</th>  
+                    <th>Offset</th>  
+                    <th>Date</th>  
+                    <th></th>  
+                </tr>  
+                @foreach (var item in Model)  
+                {  
+                    <tr>  
+                        <td><a asp-action="DownloadFile" asp-route-id="@item.Id"> @item.Name</a></td>
+                        <td>@item.Offset</td>  
+                        <td>@item.CreateDate.ToString("dd/MM/yy HH:mm")</td> 
+                        <td><a asp-action="RemoveFile" asp-route-id="@item.Id">Delete</a></td>   
+                    </tr>  
+                }  
+            </table> 
+            }
+            else{
+                <p>Não existem registros =(</p>
+            }
+
+             <div class="wrap-btn">
+                <a asp-action="Index">Home</a>
+            </div>
+
+            <div class="error-text">@ViewBag.Error</div>
+        </div>
+    </div>
+</div>
+
