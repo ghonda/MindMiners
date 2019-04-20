@@ -1,7 +1,6 @@
 using MindMiners.Domain.Entities;
 using MindMiners.Domain.Interfaces;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace MindMiners.Application
 {

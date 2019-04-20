@@ -13,21 +13,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-Infrastructure", "4-Infra
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5-Test", "5-Test", "{B419249C-415A-4E78-BEE4-3C3D7E180A22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindMiners.Application", "MindMiners.Application\MindMiners.Application.csproj", "{41D2DA92-CD0C-455B-9631-8DFBBE49BD72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MindMiners.Application", "MindMiners.Application\MindMiners.Application.csproj", "{41D2DA92-CD0C-455B-9631-8DFBBE49BD72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindMiners.Domain", "MindMiners.Domain\MindMiners.Domain.csproj", "{53D36B1E-F3CF-44D5-B154-72700DF1D7B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MindMiners.Domain", "MindMiners.Domain\MindMiners.Domain.csproj", "{53D36B1E-F3CF-44D5-B154-72700DF1D7B5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1-Data", "4.1-Data", "{8146CFC8-DE44-4345-AA89-34D94EE07F30}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2-CrossCutting", "4.2-CrossCutting", "{7AFAAD7A-4D5D-46C1-8087-8ECFF36A261A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindMiners.CrossCutting.IoC", "MindMiners.CrossCutting.IoC\MindMiners.CrossCutting.IoC.csproj", "{AD79C00C-F6EB-4FC9-8A99-513CA799AE2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MindMiners.CrossCutting.IoC", "MindMiners.CrossCutting.IoC\MindMiners.CrossCutting.IoC.csproj", "{AD79C00C-F6EB-4FC9-8A99-513CA799AE2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindMiners.Data", "MindMiners.Data\MindMiners.Data.csproj", "{B01E7D03-F458-4BC3-814A-014919F8178E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MindMiners.Data", "MindMiners.Data\MindMiners.Data.csproj", "{B01E7D03-F458-4BC3-814A-014919F8178E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindMiners", "MindMiners\MindMiners.csproj", "{44444201-3BA8-42AC-8131-5EED470B4E13}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MindMiners", "MindMiners\MindMiners.csproj", "{44444201-3BA8-42AC-8131-5EED470B4E13}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindMiners.CrossCutting.Infrastructure", "MindMiners.CrossCutting.Infrastructure\MindMiners.CrossCutting.Infrastructure.csproj", "{296C9232-5D42-4495-9E27-DAC2B44FCA08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MindMiners.CrossCutting.Infrastructure", "MindMiners.CrossCutting.Infrastructure\MindMiners.CrossCutting.Infrastructure.csproj", "{296C9232-5D42-4495-9E27-DAC2B44FCA08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindMiners.Application.Tests", "MindMiners.Application.Tests\MindMiners.Application.Tests.csproj", "{2317D97C-CFE6-41DB-AA06-14C060717F6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindMiners.CrossCutting.Infrastructure.Tests", "MindMiners.CrossCutting.Infrastructure.Tests\MindMiners.CrossCutting.Infrastructure.Tests.csproj", "{E47EE125-EB41-43C9-A8F8-C3DD1EC5F3A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +63,14 @@ Global
 		{296C9232-5D42-4495-9E27-DAC2B44FCA08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{296C9232-5D42-4495-9E27-DAC2B44FCA08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{296C9232-5D42-4495-9E27-DAC2B44FCA08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2317D97C-CFE6-41DB-AA06-14C060717F6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2317D97C-CFE6-41DB-AA06-14C060717F6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2317D97C-CFE6-41DB-AA06-14C060717F6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2317D97C-CFE6-41DB-AA06-14C060717F6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E47EE125-EB41-43C9-A8F8-C3DD1EC5F3A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E47EE125-EB41-43C9-A8F8-C3DD1EC5F3A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E47EE125-EB41-43C9-A8F8-C3DD1EC5F3A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E47EE125-EB41-43C9-A8F8-C3DD1EC5F3A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,6 +84,8 @@ Global
 		{B01E7D03-F458-4BC3-814A-014919F8178E} = {8146CFC8-DE44-4345-AA89-34D94EE07F30}
 		{44444201-3BA8-42AC-8131-5EED470B4E13} = {0DFD4F86-6CF4-416C-9C0C-44B913F7040A}
 		{296C9232-5D42-4495-9E27-DAC2B44FCA08} = {7AFAAD7A-4D5D-46C1-8087-8ECFF36A261A}
+		{2317D97C-CFE6-41DB-AA06-14C060717F6D} = {B419249C-415A-4E78-BEE4-3C3D7E180A22}
+		{E47EE125-EB41-43C9-A8F8-C3DD1EC5F3A4} = {B419249C-415A-4E78-BEE4-3C3D7E180A22}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C67416BC-FA90-41F4-B77A-A25FF1FC040E}

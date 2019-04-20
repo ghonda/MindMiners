@@ -4,10 +4,7 @@ using MindMiners.CrossCutting.Infrastructure.Utils;
 using MindMiners.Domain.Interfaces;
 using MindMiners.Models;
 using System;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MindMiners.Controllers
 {
@@ -45,7 +42,7 @@ namespace MindMiners.Controllers
                     return ReturnError(validationResult.Errors.FirstOrDefault().ErrorMessage);
 
                 var offSet = Helper.ConvertStringToDouble(model.Offset);
-                var newFileBytes = _synchronizationApplication.SubtitleSync(model.FileToUpload.OpenReadStream(),model.FileToUpload.FileName,  offSet);
+                var newFileBytes = _synchronizationApplication.SubtitleSync(model.FileToUpload.OpenReadStream(), model.FileToUpload.FileName, offSet);
                 return File(newFileBytes, "application/x-msdownload", model.FileToUpload.FileName);
             }
             catch (Exception e)
@@ -60,8 +57,8 @@ namespace MindMiners.Controllers
             ViewBag.Error = string.Empty;
             try
             {
-                var file = _historyApplication.GetFile(id);
-                return File(file.fileBytes, "application/x-msdownload", file.name);
+                var (fileBytes, name) = _historyApplication.GetFile(id);
+                return File(fileBytes, "application/x-msdownload", name);
             }
             catch (Exception e)
             {

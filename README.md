@@ -13,6 +13,7 @@ Recebe o upload de um arquivo de legenda SubRip(.srt), aplica o deslocamento tem
 * [FluentValidation](https://fluentvalidation.net/) - Framework utilizado para realizar validações dos inputs.
 * [Dapper](https://dapper-tutorial.net/) - MicroOrm para conexão com o banco.
 * [SqLite3](https://www.sqlite.org/index.html) - Banco de dados serveless.
+* [Nunit](https://nunit.org/) - Framework utilizado nos testes de unidade.
 
 ## Authors
 
